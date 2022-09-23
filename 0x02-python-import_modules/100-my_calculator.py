@@ -9,7 +9,7 @@ if __name__ == "__main__":
         a = int(sys.argv[1])
         b = int(sys.argv[3])
         list_ = [('+', func.add(a, b)), ('-', func.sub(a, b)),
-        ('/', func.div(a, b)), ('*', func.mul(a, b))]
+                 ('/', func.div(a, b)), ('*', func.mul(a, b))]
         operators = list('+-/*')
         if sys.argv[2] not in operators:
             print("Unknown operator. Available operators: +, -, * and /")
@@ -17,4 +17,4 @@ if __name__ == "__main__":
         else:
             for i, v in list_:
                 if sys.argv[2] == i:
-                    print("{} {} {} = {}".format(a, i, b, v)) 
+                    print("{} {} {} = {}".format(a, i, b, v))
