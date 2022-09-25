@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Deletes an item """
 
+
 def delete_at(my_list=[], idx=0):
     """ function deletes item as specific position
         in a list

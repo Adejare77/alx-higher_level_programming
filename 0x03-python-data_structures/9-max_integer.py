@@ -2,6 +2,7 @@
 """ Finds the biggest integer of a list
 """
 
+
 def max_integer(my_list=[]):
     """ finds the highest number in the list
 

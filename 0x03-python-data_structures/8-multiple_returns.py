@@ -3,6 +3,7 @@
     of a string and its first character
 """
 
+
 def multiple_returns(sentence):
     """ returns first character and length of string
 

@@ -3,6 +3,8 @@
     a specific position without modifying the original
     list (like in C).
 """
+
+
 def new_in_list(my_list, idx, element):
     """ replaces element in the list without
         replacing the original list

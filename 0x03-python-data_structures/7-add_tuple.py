@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 """ function that adds 2 tuples """
+
 
 def add_tuple(tuple_a=(), tuple_b=()):
     """ adds two argument
@@ -22,6 +24,3 @@ def add_tuple(tuple_a=(), tuple_b=()):
         while (len(b) < 2):
             b.append(0)
     return (a[0] + b[0], a[1] + b[1])
-            
-        
-        

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ function that prints a matrix of integers """
 
+
 def print_matrix_integer(matrix=[[]]):
     """ print a matrix of integers
 

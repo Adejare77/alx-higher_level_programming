@@ -2,6 +2,8 @@
 """ function that removes all characters c and C
     from a string
 """
+
+
 def no_c(my_string):
     """ removes character c and C
 

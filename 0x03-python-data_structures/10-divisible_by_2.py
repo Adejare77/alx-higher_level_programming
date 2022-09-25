@@ -2,6 +2,7 @@
 """ This finds the multiples of 2
 """
 
+
 def divisible_by_2(my_list=[]):
     """ function that finds muliples of 2 in a list
 
