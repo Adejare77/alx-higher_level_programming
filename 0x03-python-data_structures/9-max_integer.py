@@ -9,8 +9,9 @@ def max_integer(my_list=[]):
         Args:
             my_list = list to search through
     """
-    max_ = my_list[0]
-    for i in my_list:
-        if i > max_:
-            max_ = i
-    return max_
+    if my_list:
+        max_ = my_list[0]
+        for i in my_list:
+            if i > max_:
+                max_ = i
+        return max_
