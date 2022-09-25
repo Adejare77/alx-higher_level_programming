@@ -11,4 +11,4 @@ def print_reversed_list_integer(my_list=[]):
         my_list: list to be reversed
     """
     for r in my_list[-1::-1]:
-        print(f"{}")
+        print("{:d}".format(r))
