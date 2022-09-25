@@ -11,6 +11,6 @@ def print_matrix_integer(matrix=[[]]):
     for i in matrix:
         for k in i:
             if (k != i[-1]):
-                print("{}".format(k), end=" ")
+                print(f"{k}", end=" ")
             else:
-                print("{}".format(k))
+                print("{k}")
