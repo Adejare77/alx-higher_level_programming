@@ -16,7 +16,7 @@ def square_matrix_simple(matrix=[]):
             the input
     """
     result = []
-    if matrix != [[]]:
+    if matrix != []:
         for list_ in matrix:
             result.append(list(map(lambda x: x**2, list_)))
     return result

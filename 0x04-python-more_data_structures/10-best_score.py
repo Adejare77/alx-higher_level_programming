@@ -4,7 +4,7 @@
 
 def best_score(a_dictionary):
     """ Returns key with the biggest integer value in a dict """
-    if a_dictionary is not None:
+    if a_dictionary is not None and a_dictionary != {}:
         max_v = max(list(a_dictionary.values()))
         for k, v in a_dictionary.items():
             if v == max_v:
