@@ -3,7 +3,9 @@
 
 
 def weight_average(my_list=[]):
-    score = [(i * k) for i, k in my_list]
-    weight = [i[1] for i in my_list]
-    result = sum(score) / sum(weight)
-    return result
+    if my_list != []:
+        score = [(i * k) for i, k in my_list]
+        weight = [i[1] for i in my_list]
+        result = sum(score) / sum(weight)
+        return result
+    return 0
