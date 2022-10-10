@@ -11,8 +11,9 @@ def safe_print_division(a, b):
     """
     try:
         c = a / b
-        print("Inside result: {}".format(c))
         return (c)
     except Exception:
-        print("Inside result: {}". format(None))
-        return None
+        c = None
+        return c
+    finally:
+        print("Inside result: {}".format(c))
