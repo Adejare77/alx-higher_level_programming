@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Defines a class "Square" and its attributes """
 
+
 class Square:
     """ defines a square that must be of integer data type
 
@@ -17,7 +18,7 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-    
+
     # getting the size
     @property
     def size(self):
