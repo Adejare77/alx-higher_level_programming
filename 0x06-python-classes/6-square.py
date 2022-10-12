@@ -57,6 +57,8 @@ class Square:
 
     def my_print(self):
         """ prints out the area of the square with the character # """
+        if self.__position[1] > 0:
+            print(""*self.__position[1])
         for i in range(self.__size):
             if self.__position[1] > 0:
                 print("_"*self.__position[0], end="")
