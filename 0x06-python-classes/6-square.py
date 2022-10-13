@@ -17,11 +17,11 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.size = size
         if not (all([isinstance(j, int) for j in position]) and
                 len(position) == 2):
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = position
+        self.position = position
 
     # getting the size
     @property
