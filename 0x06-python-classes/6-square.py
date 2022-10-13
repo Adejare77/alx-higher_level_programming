@@ -17,11 +17,11 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        self.size = size
+        self.__size = size
         if not (all([isinstance(j, int) for j in position]) and
                 len(position) == 2):
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.position = position
+        self.__position = position
 
     # getting the size
     @property
@@ -59,7 +59,7 @@ class Square:
 
     def my_print(self):
         """ prints out the area of the square with the character # """
-        [print("") for k in range(self.__position[1])]
+        [print("") for k in range(self.__position[1]) if self.__size != 0]
         for i in range(self.__size):
             [print(" "*self.__position[0], end="")]
             [print("#"*self.__size)]
