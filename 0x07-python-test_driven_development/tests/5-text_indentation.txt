@@ -1,0 +1,23 @@
+============================================
+Doctest for the module 5-text_indentation.py
+============================================
+
+This test file tests for the function ``text_indentation(text)``
+The function ``text_indentation(text)`` returns the text with characters:
+?, . and : followed with two new lines
+
+Usage
+=====
+::
+importing the function
+
+        >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# The functions
+::
+        >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? beatiorem! Iam ruinas videres""")
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <BLANKLINE>
+        Quonam modo?
+        <BLANKLINE>
+        beatiorem! Iam ruinas videres

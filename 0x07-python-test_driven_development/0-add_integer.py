@@ -4,12 +4,12 @@
 """
 
 
-def add_integer(a, b: int=98):
+def add_integer(a, b=98):
     """ Returns sum of a and b """
     if not isinstance(a, (int, float)):
-            raise TypeError("a must be an integer")
+        raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
-            raise TypeError("b must be an integer")
+        raise TypeError("b must be an integer")
     a = int(a)
     b = int(b)
 
