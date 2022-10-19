@@ -44,12 +44,6 @@ Numbers
         >>> add_integer(-71)
         27
 
-::
-# When a is not given but b is given
-        >>> add_integer(, -3.24)
-        Traceback (most recent call last):
-        SyntaxError: invalid syntax
-
 
 =============
 Non-Numbers
