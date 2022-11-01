@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """ Save Object to a Json File """
-
 import json
+
+
 def save_to_json_file(my_obj, filename):
     """ writes an object to a text file using JSON representation
 
