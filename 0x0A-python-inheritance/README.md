@@ -1,2 +1,0 @@
-#!/bin/bash
-Python Inheritance
