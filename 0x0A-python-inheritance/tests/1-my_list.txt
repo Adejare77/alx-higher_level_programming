@@ -1,0 +1,64 @@
+============================================================
+This module tests for the function ``print_sorted``
+and returns a sorted list value
+============================================================
+Usage
+======
+The function ``print_sorted(...)`` returns a list of sorted value
+without changing the original list itself
+
+::
+importing the 1-my_list.py
+
+>>> print_sorted = __import__('1-my_list').print_sorted
+
+# Test function
+=======
+Numbers
+=======
+::
+# When a and b are positive
+        >>> print_sorted(4, 0.3)
+        4
+        >>> print_sorted(89, 4)
+        93
+
+::
+# When a and b are negative
+        >>> print_sorted(-2.3, -8)
+        -10
+
+::
+# When either a or b is positive or negative
+        >>> print_sorted(-4, 7)
+        3
+        >>> print_sorted(89, -91.5)
+        -2
+
+# When only one element is given
+        >>> print_sorted(0.458)
+        98
+        >>> print_sorted(-71)
+        27
+
+
+=============
+Non-Numbers
+=============
+::
+# When None value is given
+        >>> print_sorted(-911, None)
+        Traceback (most recent call last):
+        TypeError: b must be an integer
+        >>> print_sorted(None)
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+::
+# When a or b is a string
+        >>> print_sorted("a", 89)
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+        >>> print_sorted(-57, "b")
+        Traceback (most recent call last):
+        TypeError: b must be an integer
