@@ -2,6 +2,7 @@
 """ Creating a Circle """
 
 import json
+import csv
 
 
 class Base:
@@ -145,6 +146,42 @@ class Base:
                 file = f.read()
             dict_repr = cls.from_json_string(file)
             instances = [cls.create(**obj) for obj in dict_repr]
+        except FileExistsError:
+            instances = []
+        return instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs) -> None:
+        """serializes in CSV
+
+        Args:
+            list_objs (list): list of instances to be saved
+        """
+        file_name = cls.__name__ + ".csv"
+        if not list_objs:
+            list_objs = []
+        else:
+            dict_repr = [obj.to_dictionary() for obj in list_objs]
+            with open(file_name, "w", encoding="utf-8") as csv_file:
+                fieldnames = [x for x in dict_repr[0]]
+                writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+                writer.writeheader()
+                writer.writerows(dict_repr)
+
+    @classmethod
+    def load_from_file_csv(cls) -> list:
+        """Deserializes csv / load from a csv file
+
+        Returns:
+            list: contains list of all instances created
+        """
+        file_name = cls.__name__ + ".csv"
+        try:
+            with open(file_name, "r", newline='', encoding="utf-8") as csv_fil:
+                csv_reader = csv.DictReader(csv_fil, delimiter=",")
+                dict_list = [{k: int(v) for k, v in instance.items()}
+                             for instance in csv_reader]
+                instances = [cls.create(**obj) for obj in dict_list]
         except FileExistsError:
             instances = []
         return instances
