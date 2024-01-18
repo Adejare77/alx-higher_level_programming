@@ -1,5 +1,4 @@
--- Active: 1705509733487@@127.0.0.1@3306@hbtn_0d_tvshows
--- uses the "hbtn_0d_tvshows" DATABASE to list all genres `not linked to the show` `Dexter`
+-- uses the "hbtn_0d_tvshows" DATABASE to list all `GENRES NOT LINKED to the SHOW Dexter`
 -- tv_shows table contains only one record where title = Dexter (but id may differ)
 -- Results must be sorted in ascending order by the genre name
 -- You can use a maximum of two SELECT statement
@@ -10,7 +9,7 @@ WITH my_table AS (
     FROM tv_shows
     JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
     WHERE title = 'Dexter'
-)
+) -- To get the ids of movies that are 'Dexter'
 SELECT DISTINCT name
 FROM tv_show_genres
 LEFT JOIN my_table ON my_table.my_genre_id = tv_show_genres.genre_id
