@@ -4,18 +4,9 @@
 -- Results must be sorted in ascending order by the genre name
 -- You can use a maximum of two SELECT statement
 -- The DATABASE name will be passed as an argument of the mysql command
---
--- WITH my_table AS (
---     SELECT id, genre_id
---     FROM tv_shows
---     JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
---     WHERE title = 'Dexter'
--- )
--- SELECT id, genre_id
--- FROM my_table;
 
 WITH my_table AS (
-    SELECT id, genre_id as my_genre_id
+    SELECT id, genre_id AS my_genre_id
     FROM tv_shows
     JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
     WHERE title = 'Dexter'
