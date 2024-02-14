@@ -3,5 +3,10 @@
 const list = require('./100-data').list;
 console.log(list);
 
-const customList = list.map((x) => x * (x - 1));
+let previousValue = 0;
+const customList = list.map((currentValue) => {
+    const result = previousValue * currentValue;
+    previousValue =  currentValue;
+    return result;
+});
 console.log(customList);
