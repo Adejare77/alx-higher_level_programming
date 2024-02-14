@@ -5,8 +5,8 @@ console.log(list);
 
 let previousValue = 0;
 const customList = list.map((currentValue) => {
-    const result = previousValue * currentValue;
-    previousValue =  currentValue;
-    return result;
+  const result = previousValue * currentValue;
+  previousValue = currentValue;
+  return result;
 });
 console.log(customList);
