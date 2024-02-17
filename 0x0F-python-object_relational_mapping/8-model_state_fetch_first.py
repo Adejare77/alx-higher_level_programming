@@ -2,9 +2,9 @@
 """prints the first 'State' object from the database hbtn_0e_6_usa"""
 
 from sys import argv
+from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State
 
 if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3360/{}'.format(
@@ -12,9 +12,12 @@ if __name__ == '__main__':
 
     session = sessionmaker(engine)()
 
-    rows = session.query(State).filter_by(id=1).all()
+    rows = session.query(State).filter_by(id=1).first()
 
     for row in rows:
         print(f'{row.id}: {row.name}')
+
+    if not rows:
+        print('Nothing')
 
     session.close()
