@@ -12,12 +12,12 @@ if __name__ == '__main__':
 
     session = sessionmaker(engine)()
 
-    rows = session.query(State).filter_by(id=1).first()
+    row = session.query(State).limit(1).all()
 
-    for row in rows:
+    for row in row:
         print(f'{row.id}: {row.name}')
 
-    if not rows:
+    if not row:
         print('Nothing')
 
     session.close()
