@@ -6,6 +6,7 @@ from sys import argv
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from relationship_state import State
+from relationship_city import City
 
 if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
@@ -16,7 +17,7 @@ if __name__ == '__main__':
 
     for state in states:
         print(f'{state.id}: {state.name}')
-        for city in state.cities:
+        for city in sorted(state.cities,  key=lambda x: x.id):
             print(f'    {city.id}: {city.name}')
 
     session.close()
