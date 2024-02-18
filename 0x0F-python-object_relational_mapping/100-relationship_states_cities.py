@@ -21,8 +21,8 @@ if __name__ == '__main__':
         City(name='San Francisco')
     ]
 
-    new_object[0].cities.append(new_object[1])
-    session.add_all(new_object)
+    new_object[0].cities.append(new_object[1])  # links State data to City data
+    session.add_all(new_object)  # same as addig new_object[0], cuz th're linkd
     session.commit()
 
     session.close()
