@@ -10,5 +10,5 @@ if __name__ == '__main__':
     url = argv[1]
     resp = requests.get(url)
     resp_header = resp.headers
-    # print(resp_header.get('X-Request-Id'))
-    print(resp_header['X-Request-Id'])
+    # print(resp_header['X-Request-Id'])
+    print(resp_header.get('X-Request-Id'))
