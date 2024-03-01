@@ -14,4 +14,4 @@ if __name__ == '__main__':
             content = resp.read().decode()
             print(content)
     except error.HTTPError as err:
-        print("Error code:", err)
+        print("Error code:", err.code)
