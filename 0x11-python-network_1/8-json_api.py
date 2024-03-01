@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     try:
         json_format = resp.json()
-        if json_format == {}:
+        if not json_format:
             print("No result")
         else:
             print(f'[{json_format.get("id")}] {json_format.get("name")}')
