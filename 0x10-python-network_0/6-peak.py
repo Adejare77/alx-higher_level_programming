@@ -32,4 +32,3 @@ def find_peak(array):
         return max(array)
     quick_sort(array, 0, len(array) - 1)
     return array[-1]
-
