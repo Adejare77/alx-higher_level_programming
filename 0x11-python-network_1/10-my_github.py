@@ -10,7 +10,6 @@ if __name__ == '__main__':
     resp = requests.get(url, auth=(argv[1], argv[2]))
 
     if resp.status_code == 200:
-        content = resp.content
         json_data = resp.json()
         print(json_data['id'])
     else:
