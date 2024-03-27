@@ -16,9 +16,8 @@ request(url, (err, resp, body) => {
     console.error(err);
     return;
   }
-  const content = JSON.stringify(body);
   // Where to write the file
-  fs.writeFile(filePath, content, 'utf-8', (err) => {
+  fs.writeFile(filePath, body, 'utf-8', (err) => {
     if (err) {
       console.error(err.message);
     }
