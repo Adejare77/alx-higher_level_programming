@@ -32,11 +32,11 @@ request({ url, followAllRedirects: true }, (err, resp, data) => {
   process.stdout.write('{ ');
   Object.entries(objects).forEach(([key, value], index, array) => {
     if (index === 0) {
-      process.stdout.write(`${key}: ${value}\n`);
+      process.stdout.write(`'${key}': ${value}\n`);
     } else if (index === array.length - 1) {
-      process.stdout.write(`  ${key}: ${value}`);
+      process.stdout.write(`  '${key}': ${value}`);
     } else {
-      console.log(`  ${key}: ${value}`);
+      console.log(`  '${key}': ${value}`);
     }
   });
   console.log(' }');
